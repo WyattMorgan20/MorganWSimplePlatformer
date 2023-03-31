@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://2023Platformer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World.gd" type="Script" id=3]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://flag.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1080, 10 )
+
+[node name="World" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 3, 3 )
+tile_data = PoolIntArray( 65535, 0, 65537, 131071, 0, 393217, 65550, 0, 393222, 196607, 0, 393217, 131083, 0, 1, 131084, 0, 2, 131085, 0, 2, 131086, 0, 2, 131087, 0, 3, 262143, 0, 393217, 196612, 0, 14, 196613, 0, 13, 196614, 0, 12, 196615, 0, 13, 196616, 0, 15, 196635, 0, 65539, 196650, 0, 393224, 196651, 0, 393225, 327679, 0, 393217, 262150, 0, 65548, 262170, 0, 65538, 262171, 0, 393219, 262183, 0, 65537, 262184, 0, 65538, 262185, 0, 65538, 262186, 0, 65538, 262187, 0, 65539, 393215, 0, 393217, 327682, 0, 393224, 327683, 0, 393225, 327686, 0, 196620, 327700, 0, 393225, 327702, 0, 393224, 327705, 0, 65538, 327706, 0, 393218, 327707, 0, 393219, 327708, 0, 65551, 327711, 0, 14, 327712, 0, 12, 327713, 0, 15, 327719, 0, 393217, 327720, 0, 393218, 327721, 0, 393218, 327722, 0, 393218, 327723, 0, 393219, 458751, 0, 393217, 393216, 0, 65538, 393217, 0, 65538, 393218, 0, 65538, 393219, 0, 65538, 393220, 0, 65538, 393221, 0, 65538, 393222, 0, 65539, 393235, 0, 65537, 393236, 0, 65538, 393237, 0, 65538, 393238, 0, 65538, 393239, 0, 65538, 393240, 0, 65538, 393241, 0, 393218, 393242, 0, 393218, 393243, 0, 393219, 393244, 0, 131086, 393248, 0, 65548, 393255, 0, 393217, 393256, 0, 393218, 393257, 0, 393218, 393258, 0, 393218, 393259, 0, 393219, 524287, 0, 393217, 458752, 0, 393218, 458753, 0, 393218, 458754, 0, 393218, 458755, 0, 393218, 458756, 0, 393218, 458757, 0, 393218, 458758, 0, 393219, 458771, 0, 393217, 458772, 0, 393218, 458773, 0, 393218, 458774, 0, 393218, 458775, 0, 393218, 458776, 0, 393218, 458777, 0, 393218, 458778, 0, 393218, 458779, 0, 393219, 458780, 0, 196623, 458784, 0, 131084, 458791, 0, 393217, 458792, 0, 393218, 458793, 0, 393218, 458794, 0, 393218, 458795, 0, 393219, 589823, 0, 393217, 524288, 0, 393218, 524289, 0, 393218, 524290, 0, 393218, 524291, 0, 393218, 524292, 0, 393218, 524293, 0, 393218, 524294, 0, 393219, 524307, 0, 393217, 524308, 0, 393218, 524309, 0, 393218, 524310, 0, 393218, 524311, 0, 393218, 524312, 0, 393218, 524313, 0, 393218, 524314, 0, 393218, 524315, 0, 393219, 524316, 0, 196621, 524317, 0, 131085, 524318, 0, 131085, 524319, 0, 131085, 524320, 0, 131085, 524321, 0, 131085, 524322, 0, 131085, 524323, 0, 131085, 524324, 0, 131085, 524325, 0, 131085, 524326, 0, 131085, 524327, 0, 393217, 524328, 0, 393218, 524329, 0, 393218, 524330, 0, 393218, 524331, 0, 393219, 655359, 0, 393217, 589824, 0, 393218, 589825, 0, 393218, 589826, 0, 393218, 589827, 0, 393218, 589828, 0, 393218, 589829, 0, 393218, 589830, 0, 393219, 589843, 0, 393217, 589844, 0, 393218, 589845, 0, 393218, 589846, 0, 393218, 589847, 0, 393218, 589848, 0, 393218, 589849, 0, 393218, 589850, 0, 393218, 589851, 0, 393219, 589852, 0, 196621, 589853, 0, 196621, 589854, 0, 196621, 589855, 0, 196621, 589856, 0, 196621, 589857, 0, 196621, 589858, 0, 196621, 589859, 0, 196621, 589860, 0, 196621, 589861, 0, 196621, 589862, 0, 196621, 589863, 0, 393217, 589864, 0, 393218, 589865, 0, 393218, 589866, 0, 393218, 589867, 0, 393219, 720895, 0, 393217, 655360, 0, 393218, 655361, 0, 393218, 655362, 0, 393218, 655363, 0, 393218, 655364, 0, 393218, 655365, 0, 393218, 655366, 0, 393219, 655379, 0, 393217, 655380, 0, 393218, 655381, 0, 393218, 655382, 0, 393218, 655383, 0, 393218, 655384, 0, 393218, 655385, 0, 393218, 655386, 0, 393218, 655387, 0, 393219, 655388, 0, 196621, 655389, 0, 196621, 655390, 0, 196621, 655391, 0, 196621, 655392, 0, 196621, 655393, 0, 196621, 655394, 0, 196621, 655395, 0, 196621, 655396, 0, 196621, 655397, 0, 196621, 655398, 0, 196621, 655399, 0, 393217, 655400, 0, 393218, 655401, 0, 393218, 655402, 0, 393218, 655403, 0, 393219 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30, 200 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_bottom = 600
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+
+[node name="KillPlane" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillPlane"]
+position = Vector2( 1080, 550 )
+shape = SubResource( 1 )
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 300, 270 )
+
+[node name="coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 177, 290 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="coin2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 710, 79 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="coin3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1746, 243 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="coin5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2171, 192 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="coin4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1096, 295 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+margin_left = 26.0
+margin_top = 26.0
+margin_right = 147.0
+margin_bottom = 51.0
+text = "Score: 0"
+
+[node name="flag" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2294, 164 )
+scale = Vector2( 2, 2 )
+
+[connection signal="body_entered" from="KillPlane" to="." method="_on_KillPlane_body_entered"]
+[connection signal="coin_collected" from="coin" to="." method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin2" to="." method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin3" to="." method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin5" to="." method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="coin4" to="." method="_on_coin_coin_collected"]
+[connection signal="flag_entered" from="flag" to="." method="_on_flag_flag_entered"]
